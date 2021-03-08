@@ -1,0 +1,27 @@
+.vertical-middle{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.noborder {
+    border: 0;
+}
+
+.yajirushi-img {
+    margin: 0 20px;
+}
+
+#imageContents {
+	margin: 0 auto;
+}
+#gallery {
+	margin: 40px 30px;
+	padding: 0;
+}
+
+#gallery tr{
+	text-align: center;
+}

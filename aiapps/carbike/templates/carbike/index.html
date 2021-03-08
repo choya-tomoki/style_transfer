@@ -1,0 +1,114 @@
+{% extends 'carbike/base.html' %}
+{% block title %}スタイル変換アプリメニュー{% endblock %}
+
+{% block content %}
+<div>
+    <h4 class="mt-4 mb-5 border-bottom">スタイル変換アプリ</h4>
+    <p>画像ファイルを選択して変換ボタンをクリックしてください。</p>
+    <form action="{% url 'carbike:predict' %}" method="post" class="form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="custom-file">
+            {{ form.image }}
+            <label class="custom-file-label" for="customFile">
+                スタイル変換したいファイルを選択してください。or ファイルをドロップ
+            </label>
+            <!--
+            <div>
+                <label class="scraping-file-input" for="customFile">
+                    <p>スクレイピングしたいものを入力</p>
+                </label>
+            </div>
+            {{ form.scraping }}
+            -->
+            
+            <p></p>
+            <label class="style-input" for="customFile">
+                <p>スタイル番号を入力してください</p>
+            </label>
+            {{ form.style }}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">変換する！</button>
+    </form> 
+
+    <table class='noborder' id="gallery">
+        <tr align="center">
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <tr align="center">
+            <td><img src='../../static/carbike/image/05.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/03.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/20.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/22.jpg' height="200"></td>
+           
+        </tr>
+        
+        <tr align="center">
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+        </tr>
+        <tr align="center">
+            <td><img src='../../static/carbike/image/07.jpg' height="200"></td> 
+            <td><img src='../../static/carbike/image/01.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/14.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/11.jpg' height="200"></td>
+        </tr>
+
+        <tr align="center">
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+        </tr>
+        <tr align="center">
+            <td><img src='../../static/carbike/image/17.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/10.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/21.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/18.jpg' height="200"></td>
+        </tr>
+        <tr align="center">
+            <th>13</th>
+            <th>14</th>
+            <th>15</th>
+            <th>16</th>
+        </tr>
+        <tr align="center">
+            <td><img src='../../static/carbike/image/04.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/12.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/06.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/16.jpg' height="200"></td>
+        </tr>
+        <tr align="center">
+            <th>17</th>
+            <th>18</th>
+            <th>19</th>
+            <th>20</th>
+        </tr>
+        <tr align="center">
+            <td><img src='../../static/carbike/image/08.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/23.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/15.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/02.jpg' height="200"></td>
+        </tr>
+        <tr align="center">
+            <th>21</th>
+            <th>22</th>
+            <th>23</th>
+            <th>24</th>
+        </tr>
+        <tr align="center">
+            <td><img src='../../static/carbike/image/09.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/13.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/24.jpg' height="200"></td>
+            <td><img src='../../static/carbike/image/19.jpg' height="200"></td>
+        </tr>
+        
+    </table>
+</div>
+{% endblock %}

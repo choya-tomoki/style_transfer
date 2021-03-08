@@ -1,0 +1,22 @@
+{% extends 'carbike/base.html' %}
+{% block title %}スタイル変換結果{% endblock %}
+
+{% block content %}
+<div>
+    <h4 class="mt-4 mb-5 border-bottom">スタイル変換結果</h4>
+
+    <table class='noborder'>
+        <tr class="vertical-middle">
+            <td><img class='preview-img' src={{ photo_data }} alt="previous_data" width="500" height="auto"></img></td>
+            <td rowspan="2"><img class='yajirushi-img' src="../../static/carbike/image/yajirushi.png" alt="yajirushi" width="150" height="auto" /></td>
+            <td rowspan="2"><img class='aftview-img' src={{ result }} alt="changed_data" width="500" height="auto"></img></td>
+        </tr>
+        <tr>
+            <td><img class='preview-img' src={{ style }} alt="previous_data" width="auto" height="auto" style="max-width: 500px; max-height: 450px;"></td>
+        </tr>
+    </table>
+
+    <a href = "{% url 'carbike:index' %}" class="btn btn-primary" style="margin-top: 30px;">画像選択メニューに戻る</a>
+
+</div>
+{% endblock %}
